@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoppping</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+    <nav>
+    <a href='/api/fruit/new'>Create A New Fruit</a>
+    <a href='/api/fruit'>My Cart!</a>
+    </nav>
+    <h1>All Fruits</h1>
+    <div>#content#</div>
+    </div>
+  </body>
+</html>
