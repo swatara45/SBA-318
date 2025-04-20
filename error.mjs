@@ -4,4 +4,4 @@ function error(status, message) {
     return err;
 }
 
-module.exports = error;
+export default error;

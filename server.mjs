@@ -6,16 +6,16 @@ import path from 'path';
 import favoriteListRoutes from './routes/favoriteListRoutes.mjs';
 import fs from 'fs'
 import bodyParser from 'body-parser';
+import error from './error.mjs';
 
 // SetUPs (DB or intializing middleware/express)
 const app = express();
 const PORT = 3000 || 3001;
 
-// middleware for error handling
-const error = require('./error')
 
 // Serving static files
 app.use(express.static('./public'));
+
 
 //Body Parsing Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,7 +30,16 @@ app.use('/api/fruit', fruitRoutes);
 app.use('/user', userRoutes);
 app.use('/favoriteList', favoriteListRoutes);
 
+// 404 Middleware
+app.use((req, res, next) => {
+  next(error(404, 'Resource Not Found'));
+});
 
+// Error-handling middleware.
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.json({ error: err.message });
+});
 
 // Listen
 app.listen(PORT, () => {
