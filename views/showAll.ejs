@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Fruits</title>
+    <link rel="stylesheet" href="../public/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <a href="/api/fruit/new">Add New Fruit</a>
+      </nav>
+      <h1>All Fruits</h1>
+
+      <% if (allFruits.length > 0) { %>
+        <ul>
+          <% allFruits.forEach(fruit => { %>
+            <li>
+              <h3><%= fruit.name %> - <%= fruit.color %></h3>
+              <a href="/api/fruit/<%= fruit.id %>">Edit</a>
+              |
+              <!-- Delete Button -->
+              <form action="/api/fruit/<%= fruit.id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+              </form>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No fruits available. <a href="/api/fruit/new">Add a fruit</a></p>
+      <% } %>
+    </div>
+  </body>
+</html>

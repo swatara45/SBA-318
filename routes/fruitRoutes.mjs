@@ -1,4 +1,3 @@
-
 import express from 'express';
 import fruits from '../data/fruits.mjs'; // adjust path as needed
 
@@ -6,20 +5,20 @@ const router = express.Router();
 
 // Route to render fruits page
 // Create / Read
-//  /api/animal - POST
+//  /api/fruit - POST
 router
   .route('/')
   .post((req, res) => {
     if (req.body.name && req.body.color) {
-      let newFruit = {
+      let Fruit = {
         id: fruits.length + 1,
         name: req.body.name,
         color: req.body.color,
       };
 
-      fruits.push(newFruit);
+      fruits.push(Fruit);
 
-      res.render('show', newFruit);
+      res.render('form', Fruit);
     } else {
       res.send(`Incorrect Info`);
     }
@@ -31,9 +30,9 @@ router
     res.render('showAll', options);
   });
 
-//   New Animal Form
+//   New Fruit Form
 router.get('/new', (req, res) => {
-  res.render('newFruit');
+  res.render('Fruit');
 });
 
 // Update / Delete /Show
@@ -77,7 +76,7 @@ router
       color: fruit.color,
     };
 
-    if (fruit) res.render('show', options);
+    if (fruit) res.render('form', options);
     else res.send('Incorrect ID');
   });
 

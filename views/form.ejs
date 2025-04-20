@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Fruit Details</title>
+    <link rel="stylesheet" href="../public/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <a href="/api/fruit">Back to Fruit List</a>
+      </nav>
+      <h1>Edit <%= name %> Details</h1>
+      <form action="/api/fruit/<%= id %>" method="POST">
+        <input type="text" name="name" value="<%= name %>" required /><br />
+        <input type="text" name="color" value="<%= color %>" required /><br />
+      </form>
+    </div>
+  </body>
+</html>

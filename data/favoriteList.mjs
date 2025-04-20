@@ -1,4 +1,4 @@
-// Lis of favorite plants of each users
+// Lis of favorite fruits of each users
 
 const favoriteList = [
     {

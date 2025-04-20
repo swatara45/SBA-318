@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Fruit</title>
+    <link rel="stylesheet" href="../public/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <a href="/api/fruit">Back to Fruit List</a>
+      </nav>
+      <h1>Add a New Fruit</h1>
+
+      <form action="/api/fruit" method="POST">
+        <input type="text" name="username" placeholder="userID" required /><br />
+        <input type="text" name="name" placeholder="Fruit Name" required /><br />
+        <input type="text" name="color" placeholder="Fruit Color" required /><br />
+        <input type="submit" value="Add Fruit" />
+      </form>
+    </div>
+  </body>
+</html>
