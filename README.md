@@ -1,4 +1,4 @@
-Express Server Application
+*Express Server Application*
 
 #Objectives
 Create a server application with Node and Express.
@@ -13,7 +13,7 @@ Use a template engine to render views with Express.
 
 Interact with a self-made API through HTML forms.
 
-#Detail of my Setup
+*Detail of my Setup*
 
  #Features
 
@@ -34,6 +34,8 @@ Add a new user via form
 View individual user profiles
 
 Edit or delete fruits
+
+
 
 1. What could you have done differently during the planning stages of your project to make the execution easier?
  Creating a checklist of required features and a rough timeline for each would have also helped keep the development process more organized.
