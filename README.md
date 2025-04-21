@@ -13,6 +13,28 @@ Use a template engine to render views with Express.
 
 Interact with a self-made API through HTML forms.
 
+#Detail of my Setup
+
+ #Features
+
+View all fruits
+
+Add a new fruit via form
+
+View details of a single fruit
+
+Edit or delete existing fruits (via PATCH/DELETE routes)
+
+#User Management
+
+View all users
+
+Add a new user via form
+
+View individual user profiles
+
+Edit or delete fruits
+
 1. What could you have done differently during the planning stages of your project to make the execution easier?
  Creating a checklist of required features and a rough timeline for each would have also helped keep the development process more organized.
 

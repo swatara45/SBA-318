@@ -1,7 +1,8 @@
 *{
-  background-color: aqua;
+  background-color: goldenrod;
   text-align: center;
-}body {
+}
+body {
   font-family: Arial, sans-serif;
   background: #f8f9fa;
   padding: 2rem;
@@ -18,8 +19,7 @@ h1 {
 }
 
 .fruit-list li {
-  background: #fff;
-  border: 1px solid #ccc;
+ 
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
