@@ -27,13 +27,10 @@ app.set('view engine', 'ejs'); // register the template engine
 
 // Routes
 app.use('/api/fruit', fruitRoutes);
-app.use('/user', userRoutes);
-app.use('/favoriteList', favoriteListRoutes);
+app.use('api/user', userRoutes);
+app.use('api/favoriteList', favoriteListRoutes);
 
-// 404 Middleware
-app.use((req, res, next) => {
-  next(error(404, 'Resource Not Found'));
-});
+
 
 // Error-handling middleware.
 app.use((err, req, res, next) => {
